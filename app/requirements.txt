@@ -1,0 +1,25 @@
+# Installed in the browser by Shinylive (micropip) when the app starts.
+modelflowib
+
+# modelflowib's dependencies which are part of Pyodide. shinylive export only
+# copies the Pyodide packages named here (or imported in the app's own files)
+# into site/, and does not follow modelflowib's dependencies; without this list
+# the browser asks the site for them and gets 404.
+# The rest of modelflowib's dependencies are pure wheels which come from PyPI.
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+sympy
+networkx
+tqdm
+pyarrow
+xarray
+jinja2
+ipython
+ipywidgets
+anywidget
+statsmodels
+# needed by ipydatagrid (from PyPI), so shinylive can not see it
+traittypes

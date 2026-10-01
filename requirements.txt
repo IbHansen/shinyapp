@@ -1,0 +1,3 @@
+# build tools (not the app's own packages, those are in app/requirements.txt)
+shiny
+shinylive

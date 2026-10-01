@@ -17,38 +17,34 @@ The app runs in two ways:
 | Path | What |
 |---|---|
 | `app/app.py` | the app: model loading and the widget definitions |
-| `app/requirements.txt` | packages Shinylive installs in the browser (`modelflowib`) |
+| `app/requirements.txt` | packages Shinylive installs in the browser (`modelflowib>=2.84` and its Pyodide dependencies) |
 | `app/data/pak.pcim` | the model and data |
-| `app/modelwidget_core.py`, `app/modelinput_shiny.py` | **temporary** copies from the modelflow repo, see below |
+| `test_app/app.py` | test of the widgets the app does not use (`sumslide`, `sheet`); not published |
 | `requirements.txt` | build tools: `shiny`, `shinylive` |
 | `.github/workflows/deploy.yml` | exports the app and publishes it on GitHub Pages |
+
+The Shiny code (`modelinput_shiny`, `modelwidget_core`) is part of ModelFlow
+from version 2.84.
 
 ## Local use (Windows)
 
 1. `setup_env.cmd` (once): creates the conda env `shinyapp` with Shiny,
    Shinylive, and ModelFlow installed editable from `C:\modelflow2\modelflow`.
-2. `run.cmd`: runs the app with normal Python and opens the browser.
+2. `run.cmd` (double-click): runs the app with normal Python and opens the
+   browser at http://127.0.0.1:8000. Close its window to stop the app.
+   `run_test.cmd` does the same for the test app, on port 8001.
 3. `build.cmd`, then `serve.cmd`: exports the browser version to `site\` and
    serves it on http://localhost:8008/. This is what GitHub Pages will show.
+
+Locally the app uses ModelFlow from `C:\modelflow2\modelflow` (the editable
+install), so changes there show up at once. The browser version uses the
+`modelflowib` released on PyPI.
 
 ## GitHub Pages
 
 Push the folder to a GitHub repo. Then, in the repo settings, go to
 **Settings -> Pages -> Build and deployment** and set **Source** to
 **GitHub Actions**. Every push to `main` exports and deploys the app.
-
-## Temporary module copies
-
-`modelwidget_core.py` and `modelinput_shiny.py` are new in ModelFlow and not yet
-in the released `modelflowib` on PyPI (2.83). Until they are, the app carries
-copies next to `app.py`. `sync_modules.cmd`, which `run.cmd` and `build.cmd`
-call, refreshes them from the local repo.
-
-Commit the copies, because the GitHub action has no access to the local repo.
-Once `modelflowib` 2.84 or later is on PyPI:
-
-- delete the two copies,
-- remove the `sync_modules.cmd` calls from `run.cmd` and `build.cmd`.
 
 ## Notes
 

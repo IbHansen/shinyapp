@@ -1,5 +1,5 @@
 # Installed in the browser by Shinylive (micropip) when the app starts.
-modelflowib
+modelflowib>=2.84
 
 # modelflowib's dependencies which are part of Pyodide. shinylive export only
 # copies the Pyodide packages named here (or imported in the app's own files)

@@ -6,6 +6,9 @@ modelflowib>=2.84
 # into site/, and does not follow modelflowib's dependencies; without this list
 # the browser asks the site for them and gets 404.
 # The rest of modelflowib's dependencies are pure wheels which come from PyPI.
+# shiny is needed too: the app imports it only through modelinput_shiny (part of
+# modelflowib), so shinylive does not see it.
+shiny
 pandas
 numpy
 scipy

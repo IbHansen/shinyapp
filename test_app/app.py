@@ -1,7 +1,7 @@
 # Test of the Shiny widgets which the published app does not use (sumslide, sheet)
 # and of more result viewer options. Not exported to GitHub Pages.
 #
-#   C:\shinyapp\run_test.cmd
+#   C:\deploy\shinyapp\run_test.cmd
 
 from pathlib import Path
 

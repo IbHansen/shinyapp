@@ -17,7 +17,7 @@ The app runs in two ways:
 | Path | What |
 |---|---|
 | `app/app.py` | the app: model loading and the widget definitions |
-| `app/requirements.txt` | packages Shinylive installs in the browser (`modelflowib>=2.84` and its Pyodide dependencies) |
+| `app/requirements.txt` | packages Shinylive installs in the browser (`modelflowib>=2.85` and its Pyodide dependencies) |
 | `app/data/pak.pcim` | the model and data |
 | `test_app/app.py` | test of the widgets the app does not use (`sumslide`, `sheet`); not published |
 | `requirements.txt` | build tools: `shiny`, `shinylive` |

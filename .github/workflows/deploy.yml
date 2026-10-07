@@ -1,5 +1,6 @@
 # Exports the Shiny app with Shinylive and publishes it on GitHub Pages.
 # In the repo: Settings -> Pages -> Build and deployment -> Source: GitHub Actions
+# Generated - master: C:\deploy\sitecontrol\shiny\shared\.github\workflows\deploy.yml
 name: Build and Deploy
 
 on:

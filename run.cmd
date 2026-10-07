@@ -1,8 +1,9 @@
 @echo off
 REM Run the app with normal Python and open it in the browser.
 REM Double-click this file. Close the window (or press Ctrl+C) to stop the app.
+REM Generated - master: C:\deploy\sitecontrol\shiny\shared\run.cmd
 setlocal
-title Pakistan carbon tax app
+for %%I in ("%~dp0.") do title %%~nxI
 call "%USERPROFILE%\miniforge3\Scripts\activate.bat" shinyapp
 if errorlevel 1 goto failed
 cd /d "%~dp0app"

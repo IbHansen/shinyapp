@@ -23,6 +23,12 @@ The app runs in two ways:
 | `requirements.txt` | build tools: `shiny`, `shinylive` |
 | `.github/workflows/deploy.yml` | exports the app and publishes it on GitHub Pages |
 
+The `.cmd` scripts, `serve.py`, `requirements.txt`, `.gitignore`/`.gitattributes` and the
+workflow are the same in every Shiny app repo: they are published in from
+`C:\deploy\sitecontrol\shiny\shared` (read-only here; edit them there and run
+`C:\deploy\publish\publish.bat shiny`). This app's own files are `app\`, `test_app\`,
+`run_test.cmd` and this README.
+
 The Shiny code (`modelinput_shiny`, `modelwidget_core`) is part of ModelFlow
 from version 2.84.
 
